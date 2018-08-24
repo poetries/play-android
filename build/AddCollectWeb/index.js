@@ -63,23 +63,17 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 12);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */,
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */
+/******/ ({
+
+/***/ 12:
 /***/ (function(module, exports, __webpack_require__) {
 
-var $app_template$ = __webpack_require__(8)
-var $app_style$ = __webpack_require__(9)
-var $app_script$ = __webpack_require__(10)
+var $app_template$ = __webpack_require__(13)
+var $app_style$ = __webpack_require__(14)
+var $app_script$ = __webpack_require__(15)
 
 $app_define$('@app-component/index', [], function($app_require$, $app_exports$, $app_module$){
      $app_script$($app_module$, $app_exports$, $app_require$)
@@ -94,7 +88,8 @@ $app_bootstrap$('@app-component/index',{ packagerVersion: '0.0.5'})
 
 
 /***/ }),
-/* 8 */
+
+/***/ 13:
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -105,119 +100,24 @@ module.exports = {
   ],
   "children": [
     {
-      "type": "input",
-      "attr": {
-        "type": "button",
-        "value": "fetch数据"
-      },
-      "classList": [
-        "btn"
-      ],
-      "events": {
-        "click": "fetchCustomerReport"
-      }
-    },
-    {
-      "type": "progress",
-      "attr": {
-        "type": "circular"
-      },
-      "shown": function () {return this.loading},
-      "style": {
-        "position": "fixed",
-        "top": "400px",
-        "left": "350px"
-      }
-    },
-    {
-      "type": "block",
-      "attr": {},
-      "repeat": function () {return this.lists},
-      "children": [
-        {
-          "type": "text",
-          "attr": {
-            "value": function () {return this.$item.title}
-          }
-        }
-      ]
-    },
-    {
       "type": "text",
       "attr": {
-        "value": function () {return this.lists}
+        "value": "classify"
       }
     }
   ]
 }
 
 /***/ }),
-/* 9 */
+
+/***/ 14:
 /***/ (function(module, exports) {
 
-module.exports = {
-  ".layout": {
-    "flexDirection": "column"
-  },
-  ".list": {
-    "flexDirection": "column"
-  },
-  ".list-item": {
-    "borderTopWidth": "1px",
-    "borderTopColor": "#eeeeee",
-    "borderBottomWidth": "1px",
-    "borderBottomColor": "#dddddd",
-    "height": "200px",
-    "flexDirection": "column",
-    "justifyContent": "center",
-    "marginBottom": "10px",
-    "paddingTop": "0px",
-    "paddingRight": "20px",
-    "paddingBottom": "0px",
-    "paddingLeft": "20px"
-  },
-  ".title": {
-    "fontSize": "40px",
-    "textAlign": "center"
-  },
-  ".content": {
-    "fontSize": "20px",
-    "color": "#aaaaaa",
-    "marginBottom": "40px"
-  },
-  ".time": {
-    "fontSize": "20px",
-    "color": "#dddddd"
-  },
-  ".fixed-btn": {
-    "color": "#ffffff",
-    "fontSize": "50px",
-    "position": "fixed",
-    "width": "100px",
-    "height": "100px",
-    "right": "40px",
-    "bottom": "40px",
-    "borderRadius": "50px",
-    "backgroundColor": "#519650"
-  },
-  ".demo-page": {
-    "flexDirection": "column",
-    "justifyContent": "center",
-    "alignItems": "center"
-  },
-  ".btn": {
-    "width": "550px",
-    "height": "86px",
-    "marginTop": "75px",
-    "borderRadius": "43px",
-    "backgroundColor": "#09ba07",
-    "fontSize": "30px",
-    "color": "#ffffff"
-  }
-}
+module.exports = {}
 
 /***/ }),
-/* 10 */
+
+/***/ 15:
 /***/ (function(module, exports) {
 
 module.exports = function(module, exports, $app_require$){'use strict';
@@ -228,60 +128,10 @@ Object.defineProperty(exports, "__esModule", {
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var _system = $app_require$('@app-module/system.fetch');
-
-var _system2 = _interopRequireDefault(_system);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
-
 exports.default = {
   data: {
-    lists: [],
     loading: false
   },
-  fetchCustomerReport: function () {
-    var _ref = _asyncToGenerator(regeneratorRuntime.mark(function _callee() {
-      var res;
-      return regeneratorRuntime.wrap(function _callee$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              this.loading = true;
-              _context.prev = 1;
-              _context.next = 4;
-              return this.$app.api.cgiHome.getBanner();
-
-            case 4:
-              res = _context.sent;
-
-              this.lists = res.data;
-              this.loading = false;
-              this.$app.$def.prompt.showToast({ message: '加载完成' });
-              _context.next = 13;
-              break;
-
-            case 10:
-              _context.prev = 10;
-              _context.t0 = _context['catch'](1);
-
-              console.log(_context.t0);
-
-            case 13:
-            case 'end':
-              return _context.stop();
-          }
-        }
-      }, _callee, this, [[1, 10]]);
-    }));
-
-    function fetchCustomerReport() {
-      return _ref.apply(this, arguments);
-    }
-
-    return fetchCustomerReport;
-  }(),
   onInit: function onInit() {
     console.log('onInit');
   }
@@ -312,7 +162,8 @@ if (moduleOwn.data && accessors.some(function (acc) {
 }}
 
 /***/ })
-/******/ ]);
+
+/******/ });
   };
   if (typeof window === "undefined") {
     return createPageHandler();

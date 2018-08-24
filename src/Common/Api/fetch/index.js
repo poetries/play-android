@@ -1,5 +1,5 @@
 import fetch from "@system.fetch"
-import {API_ROOT} from '../config/index'
+import {API_ROOT} from '../../config/index'
 
 const headers = {}
 const $http = {}
@@ -12,7 +12,7 @@ const quickFetch = (url, data = null, method = 'get') =>{
         header: headers,
         method,
         success: function(data) {
-          resolve(data && JSON.parse(data.data) || data)
+          resolve(data && JSON.parse(data.data))
         },
         fail: function(data, code) {
           reject(data)

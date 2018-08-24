@@ -1,0 +1,20 @@
+<template>
+  <div class="demo-page">
+      <text>classify</text>
+  </div>
+</template>
+
+<script>
+  export default {
+      data: {
+          loading:false
+      },
+      onInit(){
+        console.log('onInit')
+      }
+  }
+</script>
+
+<style>
+
+</style>

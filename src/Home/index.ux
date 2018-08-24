@@ -1,6 +1,6 @@
 <template>
   <div class="demo-page">
-    <input class="btn" type="button" value="fetch数据" onclick="fetchCustomerReport" />
+    <input class="btn" type="button" value="fetch数据" onclick="fetchBanner" />
       <progress type="circular" if="loading" style="position:fixed;top:400px;left:350px"></progress>
       <block  for="{{lists}}">
           <text>{{$item.title}}</text>
@@ -10,16 +10,20 @@
 </template>
 
 <script>
-  import fetch from "@system.fetch"
+  import {
+    getBanner,
+    getArticle
+  } from '../Common/Api/index'
+
   export default {
       data: {
           lists:[],
           loading:false
       },
-      async fetchCustomerReport(){
+      async fetchBanner(){
         this.loading = true
         try {
-            const res =  await this.$app.api.cgiHome.getBanner()
+            const res =  await getBanner()
             this.lists = res.data
             this.loading = false
             this.$app.$def.prompt.showToast({  message: '加载完成'})

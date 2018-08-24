@@ -9,7 +9,6 @@
     import router from '@system.router'
     import storage from '@system.storage'
     import share from '@system.share'
-    import {default as Y} from './Common/Api/cgi'
   
     // 注意：仅用于注入类库函数，不允许存储页面组件等数据
     const injectRef = Object.getPrototypeOf(global) || global
@@ -24,9 +23,6 @@
       prompt: prompt,
       router: router,
       storage: storage,
-      share: share,
-      onCreate(){
-        this.api = Y
-      }
+      share: share
     }
   </script>

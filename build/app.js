@@ -63,11 +63,12 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 50);
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */
+/* 0 */,
+/* 1 */
 /***/ (function(module, exports) {
 
 var core = module.exports = { version: '2.5.7' };
@@ -75,7 +76,7 @@ if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
 /***/ }),
-/* 1 */
+/* 2 */
 /***/ (function(module, exports) {
 
 // https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
@@ -87,7 +88,7 @@ if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
 
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports) {
 
 module.exports = function (it) {
@@ -96,17 +97,17 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Thank's IE8 for his funny defineProperty
-module.exports = !__webpack_require__(4)(function () {
+module.exports = !__webpack_require__(5)(function () {
   return Object.defineProperty({}, 'a', { get: function () { return 7; } }).a != 7;
 });
 
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports) {
 
 module.exports = function (exec) {
@@ -119,18 +120,18 @@ module.exports = function (exec) {
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.13 ToObject(argument)
-var defined = __webpack_require__(16);
+var defined = __webpack_require__(55);
 module.exports = function (it) {
   return Object(defined(it));
 };
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports) {
 
 var hasOwnProperty = {}.hasOwnProperty;
@@ -140,14 +141,52 @@ module.exports = function (it, key) {
 
 
 /***/ }),
-/* 7 */,
 /* 8 */,
 /* 9 */,
 /* 10 */,
-/* 11 */
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */,
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var $app_script$ = __webpack_require__(12)
+var $app_script$ = __webpack_require__(51)
 
 $app_define$('@app-application/app', [], function($app_require$, $app_exports$, $app_module$){
      $app_script$($app_module$, $app_exports$, $app_require$)
@@ -160,7 +199,7 @@ $app_bootstrap$('@app-application/app',{ packagerVersion: '0.0.5'})
 
 
 /***/ }),
-/* 12 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = function(module, exports, $app_require$){'use strict';
@@ -169,11 +208,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _getPrototypeOf = __webpack_require__(13);
+var _getPrototypeOf = __webpack_require__(52);
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
 
-var _util = __webpack_require__(33);
+var _util = __webpack_require__(72);
 
 var _util2 = _interopRequireDefault(_util);
 
@@ -197,15 +236,11 @@ var _system9 = $app_require$('@app-module/system.share');
 
 var _system10 = _interopRequireDefault(_system9);
 
-var _cgi = __webpack_require__(34);
-
-var _cgi2 = _interopRequireDefault(_cgi);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var injectRef = (0, _getPrototypeOf2.default)(global) || global;
 
-injectRef.regeneratorRuntime = __webpack_require__(37);
+injectRef.regeneratorRuntime = __webpack_require__(73);
 
 exports.default = {
   clipboard: _system2.default,
@@ -213,37 +248,34 @@ exports.default = {
   prompt: _system4.default,
   router: _system6.default,
   storage: _system8.default,
-  share: _system10.default,
-  onCreate: function onCreate() {
-    this.api = _cgi2.default;
-  }
+  share: _system10.default
 };
-(exports.default || module.exports).manifest = {"package":"com.application.wanandroid","name":"quickapp-template","versionName":"1.0.0","versionCode":"1","minPlatformVersion":"101","icon":"/Common/Image/logo.png","features":[{"name":"system.prompt"},{"name":"system.router"},{"name":"system.shortcut"},{"name":"system.fetch"},{"name":"system.webview"},{"name":"system.storage"},{"name":"system.clipboard"},{"name":"system.share"}],"permissions":[{"origin":"*"}],"config":{"logLevel":"off"},"router":{"entry":"Home","pages":{"Home":{"component":"index"}}},"display":{"titleBarBackgroundColor":"#f2f2f2","titleBarTextColor":"#414141","menu":true,"pages":{"Home":{"titleBarText":"快应用模板","menu":false}}}};
+(exports.default || module.exports).manifest = {"package":"com.application.playandroid","name":"playandroid","versionName":"1.0.0","versionCode":"1","minPlatformVersion":"101","icon":"/Common/Image/logo.png","features":[{"name":"system.prompt"},{"name":"system.router"},{"name":"system.shortcut"},{"name":"system.fetch"},{"name":"system.webview"},{"name":"system.storage"},{"name":"system.clipboard"},{"name":"system.share"},{"name":"system.webview"}],"permissions":[{"origin":"*"}],"config":{"logLevel":"debug"},"router":{"entry":"Dashboard","pages":{"Dashboard":{"component":"index"},"Webview":{"component":"index"},"CollectArticleList":{"component":"index"},"AddCollectArticle":{"component":"index"},"CollectWebList":{"component":"index"},"AddCollectWeb":{"component":"index"}}},"display":{"titleBar":true,"titleBarBackgroundColor":"#24b9ff","titleBarTextColor":"#ffffff","titleBarText":"首页","pages":{"CollectArticleList":{"titleBar":false},"AddCollectArticle":{"titleBarText":"收藏站外文章"},"CollectWebList":{"titleBar":false},"AddCollectWeb":{"titleBarText":"收藏网站"}}}};
 }
 
 /***/ }),
-/* 13 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(14), __esModule: true };
+module.exports = { "default": __webpack_require__(53), __esModule: true };
 
 /***/ }),
-/* 14 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(15);
-module.exports = __webpack_require__(0).Object.getPrototypeOf;
+__webpack_require__(54);
+module.exports = __webpack_require__(1).Object.getPrototypeOf;
 
 
 /***/ }),
-/* 15 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.9 Object.getPrototypeOf(O)
-var toObject = __webpack_require__(5);
-var $getPrototypeOf = __webpack_require__(17);
+var toObject = __webpack_require__(6);
+var $getPrototypeOf = __webpack_require__(56);
 
-__webpack_require__(22)('getPrototypeOf', function () {
+__webpack_require__(61)('getPrototypeOf', function () {
   return function getPrototypeOf(it) {
     return $getPrototypeOf(toObject(it));
   };
@@ -251,7 +283,7 @@ __webpack_require__(22)('getPrototypeOf', function () {
 
 
 /***/ }),
-/* 16 */
+/* 55 */
 /***/ (function(module, exports) {
 
 // 7.2.1 RequireObjectCoercible(argument)
@@ -262,13 +294,13 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 17 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
-var has = __webpack_require__(6);
-var toObject = __webpack_require__(5);
-var IE_PROTO = __webpack_require__(18)('IE_PROTO');
+var has = __webpack_require__(7);
+var toObject = __webpack_require__(6);
+var IE_PROTO = __webpack_require__(57)('IE_PROTO');
 var ObjectProto = Object.prototype;
 
 module.exports = Object.getPrototypeOf || function (O) {
@@ -281,22 +313,22 @@ module.exports = Object.getPrototypeOf || function (O) {
 
 
 /***/ }),
-/* 18 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var shared = __webpack_require__(19)('keys');
-var uid = __webpack_require__(21);
+var shared = __webpack_require__(58)('keys');
+var uid = __webpack_require__(60);
 module.exports = function (key) {
   return shared[key] || (shared[key] = uid(key));
 };
 
 
 /***/ }),
-/* 19 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var core = __webpack_require__(0);
-var global = __webpack_require__(1);
+var core = __webpack_require__(1);
+var global = __webpack_require__(2);
 var SHARED = '__core-js_shared__';
 var store = global[SHARED] || (global[SHARED] = {});
 
@@ -304,20 +336,20 @@ var store = global[SHARED] || (global[SHARED] = {});
   return store[key] || (store[key] = value !== undefined ? value : {});
 })('versions', []).push({
   version: core.version,
-  mode: __webpack_require__(20) ? 'pure' : 'global',
+  mode: __webpack_require__(59) ? 'pure' : 'global',
   copyright: '© 2018 Denis Pushkarev (zloirock.ru)'
 });
 
 
 /***/ }),
-/* 20 */
+/* 59 */
 /***/ (function(module, exports) {
 
 module.exports = true;
 
 
 /***/ }),
-/* 21 */
+/* 60 */
 /***/ (function(module, exports) {
 
 var id = 0;
@@ -328,13 +360,13 @@ module.exports = function (key) {
 
 
 /***/ }),
-/* 22 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // most Object methods by ES6 should accept primitives
-var $export = __webpack_require__(23);
-var core = __webpack_require__(0);
-var fails = __webpack_require__(4);
+var $export = __webpack_require__(62);
+var core = __webpack_require__(1);
+var fails = __webpack_require__(5);
 module.exports = function (KEY, exec) {
   var fn = (core.Object || {})[KEY] || Object[KEY];
   var exp = {};
@@ -344,14 +376,14 @@ module.exports = function (KEY, exec) {
 
 
 /***/ }),
-/* 23 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(1);
-var core = __webpack_require__(0);
-var ctx = __webpack_require__(24);
-var hide = __webpack_require__(26);
-var has = __webpack_require__(6);
+var global = __webpack_require__(2);
+var core = __webpack_require__(1);
+var ctx = __webpack_require__(63);
+var hide = __webpack_require__(65);
+var has = __webpack_require__(7);
 var PROTOTYPE = 'prototype';
 
 var $export = function (type, name, source) {
@@ -412,11 +444,11 @@ module.exports = $export;
 
 
 /***/ }),
-/* 24 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // optional / simple context binding
-var aFunction = __webpack_require__(25);
+var aFunction = __webpack_require__(64);
 module.exports = function (fn, that, length) {
   aFunction(fn);
   if (that === undefined) return fn;
@@ -438,7 +470,7 @@ module.exports = function (fn, that, length) {
 
 
 /***/ }),
-/* 25 */
+/* 64 */
 /***/ (function(module, exports) {
 
 module.exports = function (it) {
@@ -448,12 +480,12 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 26 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var dP = __webpack_require__(27);
-var createDesc = __webpack_require__(32);
-module.exports = __webpack_require__(3) ? function (object, key, value) {
+var dP = __webpack_require__(66);
+var createDesc = __webpack_require__(71);
+module.exports = __webpack_require__(4) ? function (object, key, value) {
   return dP.f(object, key, createDesc(1, value));
 } : function (object, key, value) {
   object[key] = value;
@@ -462,15 +494,15 @@ module.exports = __webpack_require__(3) ? function (object, key, value) {
 
 
 /***/ }),
-/* 27 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var anObject = __webpack_require__(28);
-var IE8_DOM_DEFINE = __webpack_require__(29);
-var toPrimitive = __webpack_require__(31);
+var anObject = __webpack_require__(67);
+var IE8_DOM_DEFINE = __webpack_require__(68);
+var toPrimitive = __webpack_require__(70);
 var dP = Object.defineProperty;
 
-exports.f = __webpack_require__(3) ? Object.defineProperty : function defineProperty(O, P, Attributes) {
+exports.f = __webpack_require__(4) ? Object.defineProperty : function defineProperty(O, P, Attributes) {
   anObject(O);
   P = toPrimitive(P, true);
   anObject(Attributes);
@@ -484,10 +516,10 @@ exports.f = __webpack_require__(3) ? Object.defineProperty : function defineProp
 
 
 /***/ }),
-/* 28 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(2);
+var isObject = __webpack_require__(3);
 module.exports = function (it) {
   if (!isObject(it)) throw TypeError(it + ' is not an object!');
   return it;
@@ -495,20 +527,20 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 29 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = !__webpack_require__(3) && !__webpack_require__(4)(function () {
-  return Object.defineProperty(__webpack_require__(30)('div'), 'a', { get: function () { return 7; } }).a != 7;
+module.exports = !__webpack_require__(4) && !__webpack_require__(5)(function () {
+  return Object.defineProperty(__webpack_require__(69)('div'), 'a', { get: function () { return 7; } }).a != 7;
 });
 
 
 /***/ }),
-/* 30 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(2);
-var document = __webpack_require__(1).document;
+var isObject = __webpack_require__(3);
+var document = __webpack_require__(2).document;
 // typeof document.createElement is 'object' in old IE
 var is = isObject(document) && isObject(document.createElement);
 module.exports = function (it) {
@@ -517,11 +549,11 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 31 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.1 ToPrimitive(input [, PreferredType])
-var isObject = __webpack_require__(2);
+var isObject = __webpack_require__(3);
 // instead of the ES6 spec version, we didn't implement @@toPrimitive case
 // and the second argument - flag - preferred type is a string
 module.exports = function (it, S) {
@@ -535,7 +567,7 @@ module.exports = function (it, S) {
 
 
 /***/ }),
-/* 32 */
+/* 71 */
 /***/ (function(module, exports) {
 
 module.exports = function (bitmap, value) {
@@ -549,7 +581,7 @@ module.exports = function (bitmap, value) {
 
 
 /***/ }),
-/* 33 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -632,265 +664,14 @@ exports.default = {
 };
 
 /***/ }),
-/* 34 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _fetch = __webpack_require__(35);
-
-var _fetch2 = _interopRequireDefault(_fetch);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Y = {};
-
-Y.cgiHome = {
-    /**
-    * 获取首页banner列表
-    */
-    getBanner: function getBanner(params) {
-        return _fetch2.default.GET('/banner/json', null);
-    },
-
-    /**
-    * 获取首页文章列表
-    */
-    getArticle: function getArticle(params) {
-        return _fetch2.default.GET('/article/list/' + params.page + 'json', null, {
-            withAuth: true,
-            canSkip: true
-        });
-    }
-};
-
-Y.cgiClassify = {
-    /**
-    * 获取体系分类
-    */
-    getClassifyList: function getClassifyList() {
-        return _fetch2.default.GET('/tree/json', null);
-    },
-
-    /**
-    * 根据分类获取文章列表
-    */
-    getArticleByClassify: function getArticleByClassify(params) {
-        return _fetch2.default.GET('article/list/' + params.page + '/json?cid=' + params.cid, null, {
-            withAuth: true,
-            canSkip: true
-        });
-    }
-};
-
-Y.cgiLogin = {
-    post: function post(params) {
-        return _fetch2.default.POST('/user/login', params);
-    }
-};
-
-Y.cgiRegister = {
-    post: function post(params) {
-        return _fetch2.default.POST('/user/login', params);
-    }
-};
-
-// 收藏相关
-Y.cgiCollect = {
-    /**
-    * 获取收藏文章列表
-    */
-    getCollectArticle: function getCollectArticle(params) {
-        return _fetch2.default.GET('lg/collect/list/' + params.page + '/json', null, { withAuth: true });
-    },
-
-    /**
-    * 收藏站内文章
-    */
-    collectArticle: function collectArticle(params) {
-        return _fetch2.default.POST('/lg/collect/' + params.id + '/json', null, { withAuth: true });
-    },
-
-    /**
-    * 收藏站外文章
-    */
-    collectArticleAdd: function collectArticleAdd(params) {
-        return _fetch2.default.POST('/lg/collect/add/json', params, { withAuth: true });
-    },
-
-    /**
-     * 从文章列表取消收藏
-     */
-    uncollectArticle: function uncollectArticle(id) {
-        return _fetch2.default.POST('/lg/uncollect_originId/' + id + '/json', null, { withAuth: true });
-    },
-
-    /**
-     * 从收藏列表取消收藏
-     */
-    uncollect: function uncollect(params) {
-        return _fetch2.default.POST('/lg/uncollect/' + params.id + '/json', { originId: params.originId }, { withAuth: true });
-    },
-
-    /**
-     * 获取收藏网站列表
-     */
-    getCollectWeb: function getCollectWeb() {
-        return _fetch2.default.GET('/lg/collect/usertools/json', null, { withAuth: true });
-    },
-
-    /**
-     * 收藏网站
-     */
-    collectWeb: function collectWeb(params) {
-        return _fetch2.default.POST('/lg/collect/addtool/json', params, { withAuth: true });
-    },
-
-    /**
-     * 编辑收藏的网址
-     */
-    editCollectWeb: function editCollectWeb(params) {
-        return _fetch2.default.POST('/lg/collect/updatetool/json', params, { withAuth: true });
-    },
-
-    /**
-     * 删除收藏的网址
-     */
-    deleteCollectWeb: function deleteCollectWeb(params) {
-        return _fetch2.default.POST('/lg/collect/deletetool/json', { id: params.id }, { withAuth: true });
-    }
-};
-
-exports.default = Y;
-
-/***/ }),
-/* 35 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _system = $app_require$('@app-module/system.fetch');
-
-var _system2 = _interopRequireDefault(_system);
-
-var _index = __webpack_require__(36);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var headers = {};
-var $http = {};
-
-var quickFetch = function quickFetch(url) {
-  var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-  var method = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'get';
-
-  return new Promise(function (resolve, reject) {
-    _system2.default.fetch({
-      url: _index.API_ROOT + url,
-      data: data,
-      header: headers,
-      method: method,
-      success: function success(data) {
-        resolve(data && JSON.parse(data.data) || data);
-      },
-      fail: function fail(data, code) {
-        reject(data);
-      }
-    });
-  });
-};
-var getAuth = function getAuth() {
-  return new Promise(function (resolve, reject) {
-    storage.get({
-      key: 'auth',
-      success: function success(data) {
-        headers.Cookie = data;
-        resolve(true);
-      },
-      fail: function fail(data, code) {
-        resolve(false);
-      }
-    });
-  });
-};
-
-var withAuth = function withAuth(url) {
-  var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-  var method = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'get';
-  var canSkip = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
-
-  return getAuth().then(function (auth) {
-    if (auth || canSkip) {
-      return quickFetch(url, data, method);
-    } else {
-      return new Promise(function (resolve, reject) {
-        reject('请先登录！');
-      });
-    }
-  });
-};
-
-$http.POST = function (url) {
-  var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-  var config = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-
-  if (config.withAuth) {
-    return withAuth(url, data, 'post', config.canSkip);
-  } else {
-    return quickFetch(url, data, 'post');
-  }
-};
-
-$http.GET = function (url) {
-  var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-  var config = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-
-  if (config.withAuth) {
-    return withAuth(url, data, 'get', config.canSkip);
-  } else {
-    return quickFetch(url, data, 'get');
-  }
-};
-$http.PUT = function (url) {
-  var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-  var config = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-
-  return quickFetch(url, data, 'put');
-};
-
-exports.default = $http;
-
-/***/ }),
-/* 36 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var API_ROOT = exports.API_ROOT = 'http://www.wanandroid.com';
-
-/***/ }),
-/* 37 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(38);
+module.exports = __webpack_require__(74);
 
 
 /***/ }),
-/* 38 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -915,7 +696,7 @@ var oldRuntime = hadRuntime && g.regeneratorRuntime;
 // Force reevalutation of runtime.js.
 g.regeneratorRuntime = undefined;
 
-module.exports = __webpack_require__(39);
+module.exports = __webpack_require__(75);
 
 if (hadRuntime) {
   // Restore the original runtime.
@@ -931,7 +712,7 @@ if (hadRuntime) {
 
 
 /***/ }),
-/* 39 */
+/* 75 */
 /***/ (function(module, exports) {
 
 /**
@@ -1672,7 +1453,7 @@ if (hadRuntime) {
   else {
     window.createAppHandler = createAppHandler
     // H5注入manifest以获取features
-    global.manifest = {"package":"com.application.wanandroid","name":"quickapp-template","versionName":"1.0.0","versionCode":"1","minPlatformVersion":"101","icon":"/Common/Image/logo.png","features":[{"name":"system.prompt"},{"name":"system.router"},{"name":"system.shortcut"},{"name":"system.fetch"},{"name":"system.webview"},{"name":"system.storage"},{"name":"system.clipboard"},{"name":"system.share"}],"permissions":[{"origin":"*"}],"config":{"logLevel":"off"},"router":{"entry":"Home","pages":{"Home":{"component":"index"}}},"display":{"titleBarBackgroundColor":"#f2f2f2","titleBarTextColor":"#414141","menu":true,"pages":{"Home":{"titleBarText":"快应用模板","menu":false}}}};
+    global.manifest = {"package":"com.application.playandroid","name":"playandroid","versionName":"1.0.0","versionCode":"1","minPlatformVersion":"101","icon":"/Common/Image/logo.png","features":[{"name":"system.prompt"},{"name":"system.router"},{"name":"system.shortcut"},{"name":"system.fetch"},{"name":"system.webview"},{"name":"system.storage"},{"name":"system.clipboard"},{"name":"system.share"},{"name":"system.webview"}],"permissions":[{"origin":"*"}],"config":{"logLevel":"debug"},"router":{"entry":"Dashboard","pages":{"Dashboard":{"component":"index"},"Webview":{"component":"index"},"CollectArticleList":{"component":"index"},"AddCollectArticle":{"component":"index"},"CollectWebList":{"component":"index"},"AddCollectWeb":{"component":"index"}}},"display":{"titleBar":true,"titleBarBackgroundColor":"#24b9ff","titleBarTextColor":"#ffffff","titleBarText":"首页","pages":{"CollectArticleList":{"titleBar":false},"AddCollectArticle":{"titleBarText":"收藏站外文章"},"CollectWebList":{"titleBar":false},"AddCollectWeb":{"titleBarText":"收藏网站"}}}};
   }
 })();
 //# sourceMappingURL=app.js.map

@@ -1,0 +1,20 @@
+<template>
+    <div class="Me-page">
+        <text>Me</text>
+    </div>
+  </template>
+  
+  <script>
+    export default {
+        data: {
+            loading:false
+        },
+        onInit(){
+          console.log('onInit')
+        }
+    }
+  </script>
+  
+  <style>
+  
+  </style>
