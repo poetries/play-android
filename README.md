@@ -1,4 +1,4 @@
-#### 玩安卓-快应用
+### 玩安卓-快应用
 
 > http://www.wanandroid.com/blog/show/2 网站提供的api开发的快应用
 
