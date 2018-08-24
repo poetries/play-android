@@ -1,0 +1,32 @@
+<script>
+    /**
+     * 应用级别的配置，供所有页面公用
+     */
+
+    import util from './util'
+    import clipboard from '@system.clipboard'
+    import prompt from '@system.prompt'
+    import router from '@system.router'
+    import storage from '@system.storage'
+    import share from '@system.share'
+    import {default as Y} from './Common/Api/cgi'
+  
+    // 注意：仅用于注入类库函数，不允许存储页面组件等数据
+    const injectRef = Object.getPrototypeOf(global) || global
+    // 注入regeneratorRuntime
+    injectRef.regeneratorRuntime = require('babel-runtime/regenerator')
+
+  // 供所有页面使用的方法
+  // 在其他页面引用 this.$app.API
+    export default {
+      clipboard: clipboard,
+      createShortcut: util.createShortcut,
+      prompt: prompt,
+      router: router,
+      storage: storage,
+      share: share,
+      onCreate(){
+        this.api = Y
+      }
+    }
+  </script>

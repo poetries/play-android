@@ -1,0 +1,103 @@
+<template>
+  <div class="demo-page">
+    <input class="btn" type="button" value="fetch数据" onclick="fetchCustomerReport" />
+      <progress type="circular" if="loading" style="position:fixed;top:400px;left:350px"></progress>
+      <block  for="{{lists}}">
+          <text>{{$item.title}}</text>
+      </block>
+      <text>{{lists}}</text>
+  </div>
+</template>
+
+<script>
+  import fetch from "@system.fetch"
+  export default {
+      data: {
+          lists:[],
+          loading:false
+      },
+      async fetchCustomerReport(){
+        this.loading = true
+        try {
+            const res =  await this.$app.api.cgiHome.getBanner()
+            this.lists = res.data
+            this.loading = false
+            this.$app.$def.prompt.showToast({  message: '加载完成'})
+        }catch(e){
+           console.log(e)
+        }
+      },
+      onInit(){
+        console.log('onInit')
+      }
+  }
+</script>
+
+<style>
+  .layout {
+    flex-direction: column;
+  }
+
+  .list {
+    flex-direction: column;
+  }
+
+  .list-item {
+    border-top-width: 1px;
+    border-top-color: #eee;
+    border-bottom-width: 1px;
+    border-bottom-color: #ddd;
+    height: 200px;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 0 20px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .content {
+    font-size: 20px;
+    color: #aaaaaa;
+    margin-bottom: 40px;
+  }
+
+  .time {
+    font-size: 20px;
+    color: #dddddd;
+  }
+
+  .fixed-btn {
+    color: #ffffff;
+    font-size: 50px;
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    right: 40px;
+    bottom: 40px;
+    border-radius: 50px;
+    background-color: #519650;
+  }
+    .demo-page {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .title {
+      font-size: 40px;
+      text-align: center;
+    }
+
+    .btn {
+      width: 550px;
+      height: 86px;
+      margin-top: 75px;
+      border-radius: 43px;
+      background-color: #09ba07;
+      font-size: 30px;
+      color: #ffffff;
+    }
+</style>
