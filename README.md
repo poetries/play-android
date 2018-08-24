@@ -1,8 +1,8 @@
-## 玩安卓-快应用
+#### 玩安卓-快应用
 
 > http://www.wanandroid.com/blog/show/2 网站提供的api开发的快应用
 
-## 功能
+### 功能
 
 * 首页
   * banner展示
@@ -19,19 +19,19 @@
 * 查看文章内容
 * 分享文章
 
-## 环境搭建
+### 环境搭建
 
-### 安装NodeJS
+#### 安装NodeJS
 
 > 需安装`6.0`以上版本的`NodeJS`
 
-### 安装hap-toolkit
+#### 安装hap-toolkit
 
 ```shell
 // hap -V // 会显示安装版本信息
 npm install -g hap-toolkit
 ```
-###  创建项目工程
+####  创建项目工程
 
 ```npm
 hap init projectName
@@ -95,7 +95,7 @@ npm run watch
 
 ![image.png](https://upload-images.jianshu.io/upload_images/1480597-5b4e639317894e37.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-## 1.4 连接手机进行调试
+###  连接手机进行调试
 
 > 注意：一定要注意手机连接的wifi与电脑所连接的网络需要在同一局域网和网段，需要能够相互访问。
 
@@ -119,12 +119,12 @@ npm run server
 
 ![image.png](https://upload-images.jianshu.io/upload_images/1480597-afd1d41337c7a3a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-### 安装Hap Extension
+#### 安装Hap Extension
 
 > 启动Visual Studio Code，打开项目，点击左上侧扩展，搜索hap，点击安装Hap Extension
 
 - 更多详情 https://doc.quickapp.cn/tutorial/getting-started/code-edit-conf.html
 
-## 入门
+### 入门
 
 > http://blog.poetries.top/2018/08/21/quick-app-summary/
