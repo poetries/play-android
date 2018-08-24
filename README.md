@@ -19,3 +19,6 @@
 * 查看文章内容
 * 分享文章
 
+## 进一步了解快应用
+
+> http://blog.poetries.top/2018/08/21/quick-app-summary/
